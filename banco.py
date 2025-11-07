@@ -30,8 +30,8 @@ def deposito(saldo, valor, extrato):
 
     return saldo, extrato, "Depósito realizado com sucesso!"
 
-def extrato(*, saldo, extrato):
-    # Formata o extrato
+def extrato(saldo, *,  extrato):
+    # Formatação do extrato
     extrato_header = "\n================ EXTRATO ================\n"
     extrato_body = extrato if extrato else "Não foram realizadas movimentações."
     extrato_footer = f"\nSaldo: R$ {saldo:.2f}\n=========================================="
